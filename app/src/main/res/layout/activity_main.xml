@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <!-- <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
+-->
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="14"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:context=".FragmentBottomPanel"
+        android:background="@color/yellowBanana"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <ImageButton
+            android:id="@+id/ButtonUser"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/yellowBanana"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_user"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageButton
+            android:id="@+id/ButtonHome"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:background="@color/yellowBanana"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ButtonSearch"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/yellowBanana"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/ButtonHome"
+            app:layout_constraintRight_toLeftOf="@id/ButtonRecipeBook"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ButtonRecipeBook"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/yellowBanana"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_book"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.685"
+            app:layout_constraintLeft_toRightOf="@id/ButtonHome"
+            app:layout_constraintRight_toLeftOf="@id/ButtonUser"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45" />
+
+        <!--<ImageButton
+            android:id="@+id/ButtonMessages"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/yellowBanana"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_messages"
+            app:layout_constraintLeft_toRightOf="@id/ButtonRecipeBook"
+            app:layout_constraintRight_toLeftOf="@id/ButtonUser"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

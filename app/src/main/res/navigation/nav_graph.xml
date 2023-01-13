@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentMainPanel">
+
+    <fragment
+        android:id="@+id/fragmentAuthorization"
+        android:name="com.example.nermaxcooking.FragmentAuthorization"
+        android:label="fragment_authorization"
+        tools:layout="@layout/fragment_authorization" >
+        <action
+            android:id="@+id/action_fragmentAuthorization_to_fragmentRegistration"
+            app:destination="@id/fragmentRegistration" />
+        <action
+            android:id="@+id/action_fragmentAuthorization_to_fragmentMainPanel2"
+            app:destination="@id/fragmentMainPanel" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRegistration"
+        android:name="com.example.nermaxcooking.FragmentRegistration"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_fragmentRegistration_to_fragmentMainPanel"
+            app:destination="@id/fragmentMainPanel" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMainPanel"
+        android:name="com.example.nermaxcooking.FragmentMainPanel"
+        android:label="fragment_main_panel"
+        tools:layout="@layout/fragment_main_panel" >
+        <action
+            android:id="@+id/action_fragmentMainPanel_to_fragmentAuthorization"
+            app:destination="@id/fragmentAuthorization" />
+    </fragment>
+</navigation>
